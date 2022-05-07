@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;1,100;1,200;1,400&display=swap');
+
+:root{
+    --bg-black-900: #f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700: #504e70;
+}
+
+
+ul{
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+
+}
+
+.header{
+    height: 3rem;
+    width: 100%;
+    color: var(--text-black-700);
+    z-index: 10;
+}
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    background-color: var(--bg-black-100);
+}
+
+
+.account{
+    width: 18%;
+    height: 100%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    right: 0;
+}
+
+.login, .register{
+    background-color: #f2f2fc;
+    padding: 10px 20px;
+    background-color: var(--bg-black-900);
+    border-radius: 5%;
+}
+.register{
+    background-color: blue;
+    color: #fff;
+}
+::before , ::after {
+    box-sizing: border-box;
+}
+.home-section{
+    background-color: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    left: 250px;
+    right: 0;
+    position: fixed;
+   
+}
+
+
+
+.sidebar{
+    width: 250px;
+    background-color: var(--bg-black-100);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    min-height: 100vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   border-right: 1px solid var(--bg-black-50);
+
+}
+.sidebar .brand{
+   position: absolute;
+   top: 50px;
+   text-transform: capitalize;
+   font-size: 16px
+
+}
+
+.sidebar .brand a {
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 12px 20px;
+    letter-spacing: 5px;
+    font-size: 25px;
+    font-family: 'Clicker Script', cursive;
+    position: relative;
+
+}
+
+.sidebar .brand a::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid blue;
+    border-left: 5px solid blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sidebar .brand a::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid blue;
+    border-right: 5px solid blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sidebar .nav-toggle{
+    width: 35px;
+    height: 30px;
+    background-color: var(--bg-black-100);
+    position: fixed;
+    top: 49px;
+    left: 250px;
+    cursor: pointer;
+}
+
+.sidebar .nav-toggle span {
+    width: 20px;
+    height: 2px;
+    background-color: blue;
+    position: relative;
+    display: inline-block;
+}
+.sidebar .nav-toggle span:before{
+    content: "";
+    background-color: blue;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: -5px;
+
+}
+.sidebar .nav-toggle span:after{
+    content: "";
+    background-color: blue;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 5px;
+
+}
+.sidebar .nav{
+  margin-top: 50px;
+
+}
+
+.sidebar .nav li{
+    margin-bottom: 20px;
+    display: block;
+    
+}
+.sidebar .nav a{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    padding: 5px 12px;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: var(--text-black-700);
+  
+    
+}
+.sidebar .nav a.active{
+    color: blue;
+    border-bottom: 3px solid blue;
+
+}
+
+.sidebar .nav li a img{
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+}
